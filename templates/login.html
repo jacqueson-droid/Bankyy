@@ -1,0 +1,83 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Bankyy</title>
+    <link rel="stylesheet"href="{{ url_for('static',filename='assets/bootstrap/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/fonts/fontawesome-all.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/fonts/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/fonts/fontawesome5-overrides.min.css')}}">
+</head>
+
+<body id="page-top">
+    <div id="wrapper">
+        
+        
+
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
+                    
+                </nav>
+                <div class="container-fluid">
+                    <div class="d-sm-flex justify-content-between align-items-center mb-4">
+                        <h3 class="text-dark mb-0">Login</h3><a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="#"><i class="fas fa-download fa-sm text-white-50"></i>&nbsp;Generate Report</a>
+                    </div>
+                    <div class="row">
+                        
+                    <div class="table-responsive table mt-2" id="dataTable" role="grid" aria-describedby="dataTable_info">
+                        
+<form action="{{ url_for('login') }}" method="post">
+    {% if mesage is defined and mesage %}
+		<div class="alert alert-warning">{{ mesage }}</div>
+	{% endif %}
+    <!-- Email input -->
+    <div class="form-outline mb-4">
+      <input type="email" id="form2Example1" name="email" class="form-control" />
+      <label class="form-label" for="form2Example1">Email</label>
+    </div>
+  
+    <!-- Password input -->
+    <div class="form-outline mb-4">
+      <input type="password" id="form2Example2" class="form-control" />
+      <label class="form-label" name="password" for="form2Example2">Password</label>
+    </div>
+  
+  
+  
+      <div class="col">
+        <!-- Simple link -->
+        <a href="#!">Forgot password?</a>
+      </div>
+    </div>
+  
+    <!-- Submit button -->
+    <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+  
+    
+  </form>
+                    </div>
+                    </div></div>
+                        
+            <footer class="bg-white sticky-footer">
+                <div class="container my-auto">
+                    <div class="text-center my-auto copyright"><span>Copyright © Bankyy</span></div>
+                </div>
+            </footer>
+        </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+    </div>
+    <script src="{{ url_for('static',filename='assets/js/jquery.min.js')}}"></script>
+    <script src="{{ url_for('static',filename='assets/bootstrap/js/bootstrap.min.js')}}"></script>
+    <script src="{{ url_for('static',filename='assets/js/chart.min.js')}}"></script>
+    <script src="{{ url_for('static',filename='assets/js/bs-init.js')}}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+    <script src="{{ url_for('static',filename='assets/js/theme.js')}}"></script>
+</body>
+
+</html>
+
